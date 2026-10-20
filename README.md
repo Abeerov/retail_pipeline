@@ -33,21 +33,44 @@ How to Build & Run the Project:
 Project Structure:
 The following structure makes the project easy to understand and modefy as each file has a clear task.
 
-retail_pipeline/
+# Retail Data Processing Pipeline
+
+```text
+Retail-Data-Processing-Pipeline/
 │
 ├── main.py
+│
+├── schema.py
+│
+├── validator.py
+│
+├── transformer.py
+│
+├── reporter.py
+│
+├── tests/
+│   ├── test_schema.py
+│   ├── test_validator.py
+│   └── test_transformer.py
+│
 ├── README.md
-├── requirements.txt
 │
-├── pipeline/
-│   ├── __init__.py
-│   ├── schema.py
-│   ├── validator.py
-│   ├── transformer.py
-│   └── reporter.py
-│
-└── tests/
+└── .gitignore
+```
 
+## File and Folder Description
+
+- **main.py** — Runs the pipeline and connects all the modules.
+- **schema.py** — Defines the structure of transaction records using a `TransactionRecord` dataclass.
+- **validator.py** — Checks transaction data for missing fields, invalid values, and formatting errors.
+- **transformer.py** — Calculates financial values, including profit margins and taxes.
+- **reporter.py** — Summarizes the processed data and generates the final report.
+- **tests/** — Contains unit tests for checking the schema, validation, and transformation functions.
+  - `test_schema.py` — Tests the transaction record structure.
+  - `test_validator.py` — Tests the data validation process.
+  - `test_transformer.py` — Tests the data transformation logic.
+- **README.md** — Explains the project, its purpose, and how to run it.
+- **.gitignore** — Lists files and folders Git should ignore.
 
 
 Modules Responsibilities:
