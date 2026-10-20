@@ -58,20 +58,6 @@ Retail-Data-Processing-Pipeline/
 └── .gitignore
 ```
 
-## File and Folder Description
-
-- **main.py** — Runs the pipeline and connects all the modules.
-- **schema.py** — Defines the structure of transaction records using a `TransactionRecord` dataclass.
-- **validator.py** — Checks transaction data for missing fields, invalid values, and formatting errors.
-- **transformer.py** — Calculates financial values, including profit margins and taxes.
-- **reporter.py** — Summarizes the processed data and generates the final report.
-- **tests/** — Contains unit tests for checking the schema, validation, and transformation functions.
-  - `test_schema.py` — Tests the transaction record structure.
-  - `test_validator.py` — Tests the data validation process.
-  - `test_transformer.py` — Tests the data transformation logic.
-- **README.md** — Explains the project, its purpose, and how to run it.
-- **.gitignore** — Lists files and folders Git should ignore.
-
 
 Modules Responsibilities:
 1- schema.py
